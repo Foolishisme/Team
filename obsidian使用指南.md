@@ -50,7 +50,7 @@ Obsidian 本质上是一个**本地 Markdown 文件阅读器**。
 
 1. **Obsidian Git**：协作核心。负责将本地修改同步到 GitHub。
     
-2. **Custom Attachment Location**：**【核心配置】** 实现图片自动归类。当你插入图片时，它会自动在当前目录下创建一个与文档同名的文件夹存放图片，避免 `assets` 根目录爆炸。
+2. **Custom Attachment Location**：**【核心配置】** 实现图片自动归类。当你插入图片时，它会自动在当前目录下创建一个与文档同名的文件夹存放图片。
     
     - _配置建议：_ `Location: ./${filename}`。
         
@@ -59,6 +59,8 @@ Obsidian 本质上是一个**本地 Markdown 文件阅读器**。
 4. **Paste Image Rename**：粘贴图片时自动重命名。我们会配合前一个插件，将图片命名为 `image_时间戳`，保证唯一性。
     
 
+### 3.1 推荐插件
+![[file-20251225164327644.png]]
 ## 4. 🛡️ Git 协作工作流 (SOP)
 
 **这是本文档最重要的部分。请严格遵守，以避免“合并冲突”带来的痛苦。**
@@ -94,7 +96,27 @@ Obsidian 本质上是一个**本地 Markdown 文件阅读器**。
 - _右上角提示 "Pushed..." 代表成功。_
     
 
-## 5. 🚨 危机处理：遇到冲突 (Conflict) 怎么办？
+## 5. 🚨 核心禁忌：千万不要上传的文件 (.gitignore)
+
+**【极其重要】** 为了防止所有人的配置互相打架，必须在仓库根目录创建一个名为 `.gitignore` 的文件，内容如下：
+
+```
+# 排除 Obsidian 内部配置文件
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.obsidian/graph.json
+.obsidian/appearance.json
+.obsidian/hotkeys.json
+
+# 排除系统缓存
+.DS_Store
+Thumbs.db
+
+# 排除插件索引
+.obsidian/plugins/obsidian-git/
+```
+
+## 6. 🚨 危机处理：遇到冲突 (Conflict) 怎么办？
 
 如果你在 Push 时报错，或者文档里出现了 `<<<<<<< HEAD` 这种奇怪的符号，说明发生了**合并冲突**。
 
@@ -102,16 +124,16 @@ Obsidian 本质上是一个**本地 Markdown 文件阅读器**。
 
 1. **保持冷静**，数据没丢。
     
-2. **使用 VS Code**（或其他代码编辑器）打开此文件夹。
+2. **使用 VS Code** 打开此文件夹。
     
-3. VS Code 会高亮显示冲突部分，选择 `Accept Current` 或 `Accept Incoming`。
+3. VS Code 会高亮显示冲突部分，选择 `Accept Current` (保留我的) 或 `Accept Incoming` (保留队友的)。
     
 4. **保存文件**并在 VS Code 中完成一次 `Commit` 和 `Sync`。
     
 
-## 6. 命名与文件规范 (House Rules)
+## 7. 命名与文件规范 (House Rules)
 
-1. **图片附件**：不要乱放，通过插件自动管理。如果手动移动了文档，记得检查图片路径是否失效。
+1. **图片附件**：通过插件自动管理。如果手动移动了文档，记得检查图片路径是否失效。
     
 2. **文件命名**：尽量使用英文或拼音命名文件名（如 `Project_Kickoff.md`），兼容性最好。
     
@@ -119,4 +141,3 @@ Obsidian 本质上是一个**本地 Markdown 文件阅读器**。
     
 
 > **💡 聪生活提示**：系统化执行的第一步是规范化存储。通过插件自动化管理附件文件夹，我们消除了“文件找不着”的信息差，极大降低了维护成本。
-

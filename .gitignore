@@ -3,3 +3,12 @@
 .obsidian/graph.json
 .obsidian/appearance.json
 .obsidian/hotkeys.json
+.obsidian/cache/
+.obsidian/indexedDB/
+.obsidian/plugins/obsidian-git/data.json
+.DS_Store
+*.log
+Thumbs.db
+desktop.ini
+*.tmp
+*.bak

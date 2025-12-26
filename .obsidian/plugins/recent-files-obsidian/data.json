@@ -1,16 +1,60 @@
 {
   "recentFiles": [
     {
-      "basename": "cursor",
-      "path": "工具的使用/cursor.md"
+      "basename": "后端 event模块",
+      "path": "深业/后端 event模块.md"
     },
     {
       "basename": "🛡️ 室内危险行为检测系统：架构与数据流说明",
       "path": "深业/🛡️ 室内危险行为检测系统：架构与数据流说明.md"
     },
     {
+      "basename": "file-20251225164327644",
+      "path": "assets/obsidian使用指南/file-20251225164327644.png"
+    },
+    {
+      "basename": "Make longer",
+      "path": "copilot/copilot-custom-prompts/Make longer.md"
+    },
+    {
+      "basename": "Remove URLs",
+      "path": "copilot/copilot-custom-prompts/Remove URLs.md"
+    },
+    {
       "basename": "obsidian使用指南",
       "path": "obsidian使用指南.md"
+    },
+    {
+      "basename": "Translate to Chinese",
+      "path": "copilot/copilot-custom-prompts/Translate to Chinese.md"
+    },
+    {
+      "basename": "Summarize",
+      "path": "copilot/copilot-custom-prompts/Summarize.md"
+    },
+    {
+      "basename": "Simplify",
+      "path": "copilot/copilot-custom-prompts/Simplify.md"
+    },
+    {
+      "basename": "Rewrite as tweet thread",
+      "path": "copilot/copilot-custom-prompts/Rewrite as tweet thread.md"
+    },
+    {
+      "basename": "Rewrite as tweet",
+      "path": "copilot/copilot-custom-prompts/Rewrite as tweet.md"
+    },
+    {
+      "basename": "Generate glossary",
+      "path": "copilot/copilot-custom-prompts/Generate glossary.md"
+    },
+    {
+      "basename": "Explain like I am 5",
+      "path": "copilot/copilot-custom-prompts/Explain like I am 5.md"
+    },
+    {
+      "basename": "cursor",
+      "path": "工具的使用/cursor.md"
     }
   ],
   "omittedPaths": [],

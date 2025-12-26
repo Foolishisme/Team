@@ -51,10 +51,6 @@
     {
       "basename": "Explain like I am 5",
       "path": "copilot/copilot-custom-prompts/Explain like I am 5.md"
-    },
-    {
-      "basename": "cursor",
-      "path": "工具的使用/cursor.md"
     }
   ],
   "omittedPaths": [],
